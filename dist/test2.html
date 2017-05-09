@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         var xhr = new XMLHttpRequest();
+         xhr.open('POST', 'assets/php/insert.php', true);
+         xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+         xhr.onload = function () {
+            // do something to response
+            console.log(this.responseText);
+         };
+         xhr.send('prenom=meric&nom=didier&score=100&temps=30&coups=24&facebook=2838938');
+      </script>
+   </body>
+</html>

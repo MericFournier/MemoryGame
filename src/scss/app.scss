@@ -1,0 +1,313 @@
+
+@charset 'UTF-8';
+// Tools
+@import 'tools/variables';
+@import 'tools/utility-classes';
+// Vendors
+@import 'vendor/responsive';
+// Base
+@import 'base/normalize';
+@import 'base/base';
+// Components
+body {
+   margin:0px;
+   padding:0px;
+   background-color:aliceblue;
+   .content {
+      width:810px;
+      margin:0 auto;
+      background-color:#fec74e; 
+      position:relative;
+      .hidden {
+         display:none;
+      }
+      header {
+         width:100%;
+         height:auto;
+         padding:10px 0;
+         text-transform:uppercase;
+         background-color:#57b598;
+         h1 {
+            text-align:center;
+            color:white;
+            font-size:16px;
+            vertical-align:middle;
+         }
+      }
+      .main {
+         background:url(../img/fleur.png);
+         background-repeat:no-repeat;
+         background-position:100% 120%;
+         height:610px;
+         .top {
+            width:100%;
+            padding-top:20px;
+         }
+         .logo { 
+            width:123px;
+            height:171px;
+            margin-left:30px;
+            background:url(../img/logo.png);
+            background-size:123px 171px;
+            background-repeat:no-repeat;
+         }
+         .intro {
+            width:325px;
+            height:170px;
+            margin-left:20px;
+            h2 {
+               color:#e34b54; 
+               text-transform:uppercase;
+               font-size:20px;
+            }
+         }
+         .count {
+            width:200px;
+            height:170px;
+            margin-left:75px;
+            .time p , .click p {
+               font-size:30px;
+               color:white;
+               font-weight:bold;
+               text-shadow:0px 0px 3px black;
+            }
+         }
+         .count , .intro , .logo {
+            display:inline-block;
+            vertical-align:top;
+         }
+         .app {
+            width:580px;
+            height:auto;
+            min-height:10px;
+            font-size:0px;
+            margin-left:80px;
+            margin-bottom:50px;
+            position: relative;
+            perspective: 800px;
+            transform-style: preserve-3d;
+            transition: transform 1s;
+            .card {
+               width: 100px;
+               height: 100px;
+               margin-left:20px;
+               margin-top:10px;
+               display:inline-block;
+               transform-style: preserve-3d;
+               transition: transform 1s;
+               figure {
+                  margin: 0;
+                  display: block;
+                  position: absolute;
+                  width: 100%;
+                  height: 100%;
+                  backface-visibility: hidden;
+               }
+            }
+            .card .front {
+               background: url(../img/dos.png);
+               background-repeat:no-repeat;
+               background-size:cover;
+            }
+            .card .back {
+               transform: rotateY( 180deg );
+            }
+            .card.flipped {
+               transform: rotateY( 180deg );
+            }
+         }
+      }
+      .accueil {
+         background:url(../img/fleur.png);
+         background-repeat:no-repeat;
+         background-position:100% 120%;
+         height:610px;
+         position:relative;
+
+         .illustration {
+            position:absolute;
+            width:318px;
+            height:390px;
+            background:url(../img/accueil/illustration.png);
+            background-size:318px 390px;
+            background-repeat:no-repeat;
+            top:18px;
+            left:65px;
+         }
+         .description {
+            width:373px;
+            height:143px;
+            position:absolute;
+            left:33px;
+            bottom:41px;
+            background:url(../img/accueil/description.png);
+            background-size:cover;
+            background-repeat:no-repeat;
+         }
+         .text {
+            width:390px;
+            height:450px;
+            position:absolute;
+            right:31px;
+            top:80px;
+            text-align:center;
+
+            p {
+               color:#e44f56;
+               font-weight:bold;
+               margin-top:15px;
+               font-size:22px;
+            }
+            p.white {
+               color:white;
+               text-shadow:0px 0px 2px black;
+               font-size:15px;
+
+               span {
+                  font-size:22px;
+               }
+            }
+            p.white.price {
+               font-size:26px;
+            }
+         }
+         .button {
+            width:242px;
+            height:64px;
+            background:url(../img/accueil/button.png);
+            background-size:cover;
+            position:absolute;
+            bottom:62px;
+            right:102px;
+         }
+      }
+
+      .formContainer {
+         width:810px;
+         height:739px;
+         background-color:rgba(0, 0, 0, 0.4);
+         position:absolute;
+         top:0px;
+         left:0px;
+         z-index:999;
+
+
+         .formMain {
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform: translateX(-50%) translateY(-50%);
+            width:600px;
+            height:630px;
+            background-color:white;
+            border-radius:20px;
+            box-shadow:0px 0px 14px black;
+
+            .infos {
+               text-align:center;
+            }
+
+            h2 {
+               font-size:28px;
+               text-align:center;
+               margin-top:14px;
+            }
+            .nth1 {
+               color:#57b598;
+            }
+            .nth2 {
+               color:#f69845;
+            }
+            .nth3 {
+               color:#ee5158;
+            }
+            .sep {
+               width:50%;
+               height:1px;
+               margin:25px auto;
+               background-color:#ee5158;
+            }
+            p {
+               color:#5b5f62;
+               font-size:14px;
+               text-align:center;
+               font-weight:bold;
+            }
+            form {
+               margin:30px auto;
+               width:430px;
+
+               input {
+                  display:inline-block;
+                  width:180px;
+                  border:0;
+                  margin:10px 0px;
+                  height:30px;
+                  
+               }
+               .inp1 {
+                  border-bottom:3px solid #51c4d8;
+               }
+               .inp2 {
+                  border-bottom:3px solid #5b5f62;
+               }
+               .inp3 {
+                  border-bottom:3px solid #5b5f62;
+                  width:100%;
+               }
+               .mrg2 {
+                  margin-left:65px;
+               }
+               label {
+                  display:block;
+                  font-size:10px;
+                  
+                  input[type="checkbox"] {
+                     width:15px;
+                     height:15px;
+                     margin:10px 5px;
+                     border:2px solid black;
+                     color:blue;
+                  }
+               }
+               input[type="submit"] {
+                  display:block;
+                  margin:20px auto;
+                  border-radius:20px;
+                  background-color:#006574;
+                  color:white;
+                  text-transform:uppercase;
+                  font-weight:300;
+                  height:40px;
+               }
+
+            }
+
+         }
+      }
+      .bottom {
+         width:100%;
+         height:90px;
+         background-color:white;
+         position:relative;
+         .logoShopping {
+            width:107px;
+            height:118px;
+            background:url(../img/shoppingParc.png);
+            left:50%;
+            transform:translateX(50%) translateY(-40px);
+         }
+         .logoSenart {
+            width:96px;
+            height:25px;
+            background:url(../img/carreSenart.png);
+            left:50%;
+            transform:translateX(-100%) translateY(8px);
+         }
+         .logoSenart , .logoShopping {
+            position:absolute;
+         }
+      }    
+   }
+
+}

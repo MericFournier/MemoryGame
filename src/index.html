@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+      <title>Carré Plage</title>
+      <meta name="description" content="" />
+
+      <!-- Schema.org data -->
+      <meta itemprop="name" content="" />
+      <meta itemprop="description" content="" />
+      <meta itemprop="image" content="" />
+
+      <!-- Twitter Card data -->
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="" />
+      <meta name="twitter:description" content="" />
+      <meta name="twitter:image:src" content="" />
+
+      <!-- Open Graph data -->
+      <meta property="og:title" content="" />
+      <meta property="og:type" content="" />
+      <meta property="og:url" content="" />
+      <meta property="og:image" content="" />
+      <meta property="og:description" content="" />
+      <meta property="og:site_name" content="" />
+
+      <!-- Links -->
+      <!--<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />-->
+      <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
+
+      <!--[if lt IE 9]>
+<script src="assets/js/vendor/html5shiv.min.js"></script>
+<![endif]-->
+   </head>
+
+   <body>
+      <div class="content">
+         <div class="formContainer hidden">
+            <div class="formMain">
+               <div class="info">
+                  <h2 class="nth1">Bravo !</h2>
+                  <h2 class="nth2">Vous avez découvert toutes les cartes en</br>
+                  <span id="result_coups"></span> coups et <span id="result_temps"></span> secondes</h2>
+                  <h2 class="nth3">vous obtenez donc un score de : </br><span id="result_score"></span> pts. </h2>
+               </div>
+               <div class="sep"></div>
+               <p>Pour découvrir le classement, merci de compléter le formulaire suivant :</p>
+               <form id="memoryForm" action="#">
+                  <input class="inp1" type="text" id="prenom" name="prenom" placeholder="Prénom" required>
+                  <input class="inp1 mrg2" type="text" id="nom" name="nom" placeholder="Nom" required>
+                  <input class="inp2" type="email" id="email" name="email" placeholder="E-mail" required>
+                  <input class="inp2 mrg2" type="text" id="zip" name="zip" placeholder="Code postal" required>
+                  <input class="inp3"  type="text" id="phone" name="phone" placeholder="Téléphone" required>
+                  <label><input type="checkbox" name="agree">J'accepte de recevoir des informations de la part de Cité Europe</label>
+                  <label><input type="checkbox" name="agree">J'accepte le <a href="#">réglement</a> du jeu-concours</label>
+                  <input type="hidden" name="score" id="scoreInput" value="">
+                  <input type="hidden" name="coups" id="coupsInput" value="">
+                  <input type="hidden" name="temps" id="tempsInput" value="">
+                  <input type="hidden" name="facebook" id="facebookInput" value="">
+                  <input type="submit" value="envoyer">
+               </form>
+            </div>
+         </div>
+         <header>
+            <h1>Grand jeu concours de l'été Carré Sénart</h1>
+         </header>
+         <section class="accueil">
+            <div class="illustration"></div>
+            <div class="description"></div>
+            <div class="text">
+               <p>Partez à la découverte des animations Carré Plage,</br> faites le meilleur score et tentez de gagner en cartes-cadeaux :</p>
+               <p class="white price">1er : 150€</br>2ème : 100€</br>3ème : 50€</p>
+               <p class="white"><span>Et 12 cartes de 15€</span> </br>(3 cartes de 15€ à gagner </br>par semaine par tirage au sort)</p>
+            </div>
+            <div class="button"></div>
+         </section>
+         <section class="main hidden">
+            <section class="top">
+               <div class="logo"></div>
+               <div class="intro">
+                  <h2>Découvrez l'ensemble des animations en un minimum de temps et de coups</h2>
+               </div>
+               <div class="count">
+                  <div class="time">
+                     <p>Temps : <span id="timeCount"></span> s</p>
+                  </div>
+                  <div class="click">
+                     <p>Coups : <span id="clickCount"></span></p>
+                  </div>
+               </div>
+            </section>
+            <section class="app">
+            </section> 
+         </section>
+         <section class="bottom">
+            <div class="logoSenart"></div>
+            <div class="logoShopping"></div>
+         </section>
+      </div>
+      <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+      </fb:login-button>
+      <div id="status">
+      </div>
+      <script src="assets/js/app.js"></script>
+   </body> 
+</html>
